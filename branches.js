@@ -1,19 +1,75 @@
 // 숙소별로 확인된 예약 페이지만 등록합니다. 예약 링크 추가 방법은 README.md를 참고하세요.
 window.EXTAY_BRANCHES = [
   {
-    "id": "haebangchon",
+    "id": "dongdaemun",
     "visible": true,
-    "name": "익스테이 맨션 해방촌",
-    "englishName": "EXTAY MANSION HAEBANGCHON",
-    "region": "서울 · 해방촌",
-    "description": "해방촌 골목의 포근한 라운지.",
-    "address": "서울시 용산구 신흥로 59, 2층",
-    "image": "assets/haebangchon-lounge.webp",
-    "imageAlt": "익스테이 맨션 해방촌의 실내",
+    "name": "익스테이 동대문",
+    "englishName": "EXTAY DONGDAEMUN",
+    "region": "서울 · 동대문",
+    "monogram": "DD",
+    "image": "assets/dongdaemun.jpg",
+    "imageAlt": "익스테이 동대문의 공용 공간",
+    "description": "따뜻한 우드톤, 여행이 만나는 곳.",
+    "sourceUrl": "https://spaceroad.co.kr/project/?idx=1",
     "bookingLinks": [
       {
-        "provider": "airbnb",
-        "url": "https://www.airbnb.co.kr/rooms/1560509983672541545"
+        "provider": "booking",
+        "url": "https://www.booking.com/hotel/kr/igseutei-dongdaemunyeogjeom.ko.html"
+      },
+      {
+        "provider": "agoda",
+        "url": "https://www.agoda.com/ko-kr/a-extay-30-4-2-ddp/hotel/seoul-kr.html?cid=1439847&currencyCode=KRW"
+      },
+      {
+        "provider": "trip",
+        "url": "https://www.trip.com/hotels/seoul-hotel-detail-126523268/extay/"
+      }
+    ]
+  },
+  {
+    "id": "jongno",
+    "visible": true,
+    "name": "더 익스테이 라운지 종로",
+    "region": "서울 · 종로",
+    "description": "도시 풍경을 품은 오렌지빛 라운지.",
+    "image": "assets/jongno.webp",
+    "imageAlt": "큰 창과 오렌지색 좌석이 있는 더 익스테이 라운지 종로",
+    "group": "extay",
+    "sourceUrl": "https://spaceroad.co.kr/project/?idx=61",
+    "bookingLinks": [
+      {
+        "provider": "booking",
+        "url": "https://www.booking.com/hotel/kr/the-extay-lounge.ko.html"
+      },
+      {
+        "provider": "agoda",
+        "url": "https://www.agoda.com/the-extay-lounge-jongno/hotel/seoul-kr.html"
+      },
+      {
+        "provider": "trip",
+        "url": "https://kr.trip.com/hotels/seoul-hotel-detail-131822395/the-extay-lounge/"
+      }
+    ]
+  },
+  {
+    "id": "anotherhouse",
+    "visible": true,
+    "name": "익스테이 어나더하우스",
+    "englishName": "EXTAY ANOTHER HOUSE",
+    "region": "서울 · 동대문",
+    "monogram": "AH",
+    "image": "assets/anotherhouse.webp",
+    "imageAlt": "어나더하우스의 입구와 복도",
+    "description": "은은한 조명이 반기는 아늑한 공간.",
+    "sourceUrl": "https://spaceroad.co.kr/project/?idx=76",
+    "bookingLinks": [
+      {
+        "provider": "booking",
+        "url": "https://www.booking.com/hotel/kr/eonadeo-hauseu.ko.html"
+      },
+      {
+        "provider": "trip",
+        "url": "https://kr.trip.com/hotels/seoul-hotel-detail-134961520/hotelname/"
       }
     ]
   },
@@ -44,79 +100,6 @@ window.EXTAY_BRANCHES = [
     ]
   },
   {
-    "id": "dongdaemun",
-    "visible": true,
-    "name": "익스테이 동대문",
-    "englishName": "EXTAY DONGDAEMUN",
-    "region": "서울 · 동대문",
-    "monogram": "DD",
-    "image": "assets/dongdaemun.jpg",
-    "imageAlt": "익스테이 동대문의 공용 공간",
-    "description": "따뜻한 우드톤, 여행이 만나는 곳.",
-    "sourceUrl": "https://spaceroad.co.kr/project/?idx=1",
-    "bookingLinks": [
-      {
-        "provider": "booking",
-        "url": "https://www.booking.com/hotel/kr/igseutei-dongdaemunyeogjeom.ko.html"
-      },
-      {
-        "provider": "agoda",
-        "url": "https://www.agoda.com/ko-kr/a-extay-30-4-2-ddp/hotel/seoul-kr.html?cid=1439847&currencyCode=KRW"
-      },
-      {
-        "provider": "trip",
-        "url": "https://www.trip.com/hotels/seoul-hotel-detail-126523268/extay/"
-      }
-    ]
-  },
-  {
-    "id": "anotherhouse",
-    "visible": true,
-    "name": "익스테이 어나더하우스",
-    "englishName": "EXTAY ANOTHER HOUSE",
-    "region": "서울 · 동대문",
-    "monogram": "AH",
-    "image": "assets/anotherhouse.webp",
-    "imageAlt": "어나더하우스의 입구와 복도",
-    "description": "은은한 조명이 반기는 아늑한 공간.",
-    "sourceUrl": "https://spaceroad.co.kr/project/?idx=76",
-    "bookingLinks": [
-      {
-        "provider": "booking",
-        "url": "https://www.booking.com/hotel/kr/eonadeo-hauseu.ko.html"
-      },
-      {
-        "provider": "trip",
-        "url": "https://kr.trip.com/hotels/seoul-hotel-detail-134961520/hotelname/"
-      }
-    ]
-  },
-  {
-    "id": "jongno",
-    "visible": true,
-    "name": "더 익스테이 라운지 종로",
-    "region": "서울 · 종로",
-    "description": "도시 풍경을 품은 오렌지빛 라운지.",
-    "image": "assets/jongno.webp",
-    "imageAlt": "큰 창과 오렌지색 좌석이 있는 더 익스테이 라운지 종로",
-    "group": "extay",
-    "sourceUrl": "https://spaceroad.co.kr/project/?idx=61",
-    "bookingLinks": [
-      {
-        "provider": "booking",
-        "url": "https://www.booking.com/hotel/kr/the-extay-lounge.ko.html"
-      },
-      {
-        "provider": "agoda",
-        "url": "https://www.agoda.com/the-extay-lounge-jongno/hotel/seoul-kr.html"
-      },
-      {
-        "provider": "trip",
-        "url": "https://kr.trip.com/hotels/seoul-hotel-detail-131822395/the-extay-lounge/"
-      }
-    ]
-  },
-  {
     "id": "yeonnam",
     "visible": true,
     "name": "익스테이 맨션 연남",
@@ -138,6 +121,23 @@ window.EXTAY_BRANCHES = [
       {
         "provider": "trip",
         "url": "https://www.trip.com/hotels/seoul-hotel-detail-134107796/hongdae-yeonnam-extay/"
+      }
+    ]
+  },
+  {
+    "id": "haebangchon",
+    "visible": true,
+    "name": "익스테이 맨션 해방촌",
+    "englishName": "EXTAY MANSION HAEBANGCHON",
+    "region": "서울 · 해방촌",
+    "description": "해방촌 골목의 포근한 라운지.",
+    "address": "서울시 용산구 신흥로 59, 2층",
+    "image": "assets/haebangchon-lounge.webp",
+    "imageAlt": "익스테이 맨션 해방촌의 실내",
+    "bookingLinks": [
+      {
+        "provider": "airbnb",
+        "url": "https://www.airbnb.co.kr/rooms/1560509983672541545"
       }
     ]
   },
