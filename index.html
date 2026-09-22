@@ -1,42 +1,24 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f3ed">
-  <title>EXTAY 익스테이 | 지점 안내</title>
-  <meta name="description" content="머무르고 싶은 공간, 익스테이. 지점별 공간과 이용 안내를 만나보세요.">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
-  <script src="branches.js" defer></script>
-  <script src="app.js" defer></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#171614">
+<title>EXTAY 익스테이 | 모든 지점 한눈에</title>
+<meta name="description" content="익스테이 지점별 공간과 이용 안내, 예약과 새로운 오픈 소식을 한곳에서 만나보세요.">
+<link rel="canonical" href="https://mobileguide-extayallbranch.vercel.app/">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:site_name" content="EXTAY 익스테이">
+<meta property="og:title" content="익스테이 · 모든 지점 한눈에"><meta property="og:description" content="지점별 공간과 이용 안내, 예약까지. 당신의 다음 여행을 익스테이에서 만나보세요.">
+<meta property="og:url" content="https://mobileguide-extayallbranch.vercel.app/"><meta property="og:image" content="https://mobileguide-extayallbranch.vercel.app/assets/extay-share-v3.png"><meta property="og:image:type" content="image/png"><meta property="og:image:alt" content="익스테이 EXTAY · 지점 안내">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="익스테이 · 모든 지점 한눈에"><meta name="twitter:description" content="익스테이 지점별 이용 안내와 예약을 한곳에서."><meta name="twitter:image" content="https://mobileguide-extayallbranch.vercel.app/assets/extay-share-v3.png"><meta name="twitter:image:alt" content="익스테이 EXTAY · 지점 안내">
+<meta property="og:image:width" content="1730"><meta property="og:image:height" content="909">
+<link rel="icon" href="assets/favicon.png" type="image/png"><link rel="stylesheet" href="styles.css"><script src="branches.js" defer></script><script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#stays">지점 목록으로 건너뛰기</a>
-  <header class="header">
-    <a class="brand" href="./" aria-label="익스테이 홈"><img src="assets/logo.png" alt="EXTAY" width="2088" height="296"></a>
-    <a class="header-link" href="#stays">지점 안내 <span aria-hidden="true">↗</span></a>
-  </header>
-  <main class="layout">
-    <section class="intro" aria-labelledby="intro-title">
-      <div class="intro-copy">
-        <p class="eyebrow">A PLACE TO STAY. A MOMENT TO KEEP.</p>
-        <h1 id="intro-title">여행의 순간이<br>머무는 곳.</h1>
-        <p class="intro-description">당신의 다음 여행,<br>익스테이에서 시작하세요.</p>
-      </div>
-      <figure class="hero-photo">
-        <img src="assets/haebangchon-lounge.webp" alt="따뜻한 조명과 소파가 있는 익스테이 맨션 해방촌의 거실" width="960" height="1440" fetchpriority="high">
-        <figcaption><span>EXTAY MANSION</span><span>HAEBANGCHON, SEOUL</span></figcaption>
-      </figure>
-    </section>
-    <section class="stays" id="stays" aria-labelledby="stays-title">
-      <div class="section-heading"><div><p class="eyebrow">FIND YOUR EXTAY</p><h2 id="stays-title">어디에 머무르시나요?</h2></div><span class="section-mark" aria-hidden="true">↘</span></div>
-      <p class="section-description">지점을 선택하고, 머무를 공간을 미리 만나보세요.</p>
-      <div id="branch-list" class="branch-list"></div>
-      <noscript><p class="noscript">익스테이 맨션 해방촌 · 서울 용산구 신흥로 59, 2층<br><a href="https://extay-release.vercel.app/guide-extay">해방촌 이용 안내 보기 ↗</a></p></noscript>
-      <aside class="next-stay"><span class="tiny-line" aria-hidden="true"></span><p class="eyebrow">MORE PLACES, MORE MOMENTS</p><h2>다음 여행에서도, 익스테이.</h2><p>새로운 공간의 소식을 이곳에서 전해드릴게요.</p></aside>
-      <footer class="footer"><img src="assets/logo.png" alt="EXTAY" width="2088" height="296"><p>익스테이 · 지점 안내</p><span>© EXTAY. All rights reserved.</span></footer>
-    </section>
-  </main>
-</body>
-</html>
+<a class="skip" href="#stays">지점 목록으로 건너뛰기</a>
+<main class="page">
+<header class="brand-cover"><img class="cover-logo" src="assets/logo.png" alt="EXTAY" width="2088" height="296"><p>YOUR STAY, YOUR MOMENT</p></header>
+<section class="profile" aria-labelledby="page-title"><h1 id="page-title">익스테이 <span>· EXTAY</span></h1><p>여행의 순간이 머무는 곳.<br>당신에게 어울리는 익스테이를 만나보세요.</p></section>
+<section class="stays" id="stays" aria-labelledby="stays-title"><div class="section-heading"><h2 id="stays-title">지점 안내 · 예약</h2><span>OUR STAYS</span></div><div id="branch-list" class="branch-grid"></div>
+<noscript><p class="empty-message">지점 목록을 보려면 JavaScript를 켜주세요.<br><a href="https://extay-release.vercel.app/guide-extay">해방촌 이용 안내 ↗</a><br><a href="https://www.agoda.com/ko-kr/extay-chungmuro/hotel/seoul-kr.html">충무로 예약 ↗</a><br><a href="https://www.agoda.com/ko-kr/a-extay-30-4-2-ddp/hotel/seoul-kr.html">동대문 예약 ↗</a><br><a href="https://anotherhouse-guide.vercel.app/">어나더하우스 이용 안내 ↗</a></p></noscript></section>
+<section class="upcoming" aria-labelledby="upcoming-title"><div class="section-heading"><h2 id="upcoming-title">곧 만나요</h2><span>COMING SOON</span></div><div id="upcoming-list" class="upcoming-list"></div></section>
+<footer class="footer"><img src="assets/logo.png" alt="EXTAY" width="2088" height="296"><p>당신의 다음 여행에서도, 익스테이.</p><small>© EXTAY. All rights reserved.</small></footer>
+</main></body></html>

@@ -9,7 +9,7 @@ window.EXTAY_BRANCHES = [
     region: "서울 · 해방촌",
     description: "해방촌에서 만나는 익스테이의 공간. 방문 전 오시는 길과 체크인, 숙소 이용 안내를 확인해 보세요.",
     address: "서울시 용산구 신흥로 59, 2층",
-    image: "assets/haebangchon-room.jpg",
+    image: "assets/haebangchon-lounge.webp",
     imageAlt: "익스테이 맨션 해방촌의 실내",
     guideUrl: "https://extay-release.vercel.app/guide-extay",
     bookingUrl: "",
@@ -17,21 +17,21 @@ window.EXTAY_BRANCHES = [
   },
   {
     id: "chungmuro", visible: true, name: "익스테이 맨션 충무로",
-    englishName: "EXTAY MANSION CHUNGMURO", region: "서울 · 충무로", monogram: "CM",
+    englishName: "EXTAY MANSION CHUNGMURO", region: "서울 · 충무로", monogram: "CM", image: "assets/chungmuro.webp", imageAlt: "익스테이 맨션 충무로의 라운지와 계단",
     description: "아고다에서 객실과 예약 가능 일정을 확인하고, 네이버 지도에서 위치를 찾아보세요.",
     bookingUrl: "https://www.agoda.com/ko-kr/extay-chungmuro/hotel/seoul-kr.html?cid=1439847&currencyCode=KRW",
     bookingLabel: "아고다 예약", mapUrl: "https://map.naver.com/p/entry/place/2040373750"
   },
   {
     id: "dongdaemun", visible: true, name: "익스테이 동대문",
-    englishName: "EXTAY DONGDAEMUN", region: "서울 · 동대문", monogram: "DD",
+    englishName: "EXTAY DONGDAEMUN", region: "서울 · 동대문", monogram: "DD", image: "assets/dongdaemun.jpg", imageAlt: "익스테이 동대문의 공용 공간",
     description: "객실과 예약 가능 일정은 아고다에서, 지점 위치는 네이버 지도에서 확인하세요.",
     bookingUrl: "https://www.agoda.com/ko-kr/a-extay-30-4-2-ddp/hotel/seoul-kr.html?cid=1439847&currencyCode=KRW",
     bookingLabel: "아고다 예약", mapUrl: "https://naver.me/5K6Tdfxh"
   },
   {
     id: "anotherhouse", visible: true, name: "익스테이 어나더하우스",
-    englishName: "EXTAY ANOTHER HOUSE", region: "어나더하우스", monogram: "AH",
+    englishName: "EXTAY ANOTHER HOUSE", region: "서울 · 동대문", monogram: "AH", image: "assets/anotherhouse.webp", imageAlt: "어나더하우스의 입구와 복도",
     description: "어나더하우스의 공간과 머무는 동안 필요한 정보를 모바일 가이드에서 확인하세요.",
     guideUrl: "https://anotherhouse-guide.vercel.app/"
   },
