@@ -10,7 +10,12 @@ window.EXTAY_BRANCHES = [
     "address": "서울시 용산구 신흥로 59, 2층",
     "image": "assets/haebangchon-lounge.webp",
     "imageAlt": "익스테이 맨션 해방촌의 실내",
-    "bookingLinks": []
+    "bookingLinks": [
+      {
+        "provider": "airbnb",
+        "url": "https://www.airbnb.co.kr/rooms/1560509983672541545"
+      }
+    ]
   },
   {
     "id": "chungmuro",
