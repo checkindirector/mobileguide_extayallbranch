@@ -73,7 +73,9 @@
     let image;
     if (b.image) { image = make("img", "branch-image"); image.src = b.image; image.alt = b.imageAlt || b.name; image.width = 400; image.height = 400; image.loading = b.group !== "collection" && list.children.length < 2 ? "eager" : "lazy"; image.decoding = "async"; }
     else { image = make("span", "branch-image monogram", b.monogram || "EXTAY"); image.setAttribute("aria-hidden", "true"); }
-    const caption = make("div", "branch-caption"); caption.append(make("span", "branch-region", b.region), make("h3", "", b.name), make("span", "branch-english", (b.englishName || "").replace(/^EXTAY\s+(MANSION\s+)?/, ""))); if (!b.englishName) caption.querySelector(".branch-english").remove(); main.append(image, caption);
+    const caption = make("div", "branch-caption");
+    caption.append(make("span", "branch-region", b.region), make("h3", "", b.name));
+    main.append(image, caption);
     const actions = make("div", "branch-actions");
     const links = bookingLinks(b);
     const button = make("button", "action primary", "예약하기"); button.type = "button";
