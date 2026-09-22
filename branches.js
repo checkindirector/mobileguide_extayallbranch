@@ -80,6 +80,28 @@ window.EXTAY_BRANCHES = [
     "projectUrl": "https://spaceroad.co.kr/project/?idx=57"
   },
   {
+    "id": "seomyeon",
+    "visible": true,
+    "name": "익스테이 서면",
+    "englishName": "EXTAY SEOMYEON",
+    "region": "부산 · 서면",
+    "status": "coming-soon",
+    "description": "2026년 10월 오픈 예정",
+    "openingMonth": "2026-10",
+    "openingLabel": "2026년 10월"
+  },
+  {
+    "id": "cheongnyangni",
+    "visible": true,
+    "name": "익스테이 청량리",
+    "englishName": "EXTAY CHEONGNYANGNI",
+    "region": "서울 · 청량리",
+    "status": "coming-soon",
+    "description": "2026년 11월 오픈 예정",
+    "openingMonth": "2026-11",
+    "openingLabel": "2026년 11월"
+  },
+  {
     "id": "mellow",
     "visible": true,
     "name": "스테이멜로우 제기",
@@ -133,23 +155,5 @@ window.EXTAY_BRANCHES = [
     "imageAlt": "나무 문과 STAY SAI 간판이 있는 스테이사이 입구",
     "group": "collection",
     "projectUrl": "https://spaceroad.co.kr/project/?idx=60"
-  },
-  {
-    "id": "cheongnyangni",
-    "visible": true,
-    "name": "익스테이 청량리",
-    "englishName": "EXTAY CHEONGNYANGNI",
-    "region": "서울 · 청량리",
-    "status": "coming-soon",
-    "description": "새로운 익스테이를 준비하고 있습니다. 오픈 소식과 이용 안내는 추후 공개됩니다."
-  },
-  {
-    "id": "seomyeon",
-    "visible": true,
-    "name": "익스테이 서면",
-    "englishName": "EXTAY SEOMYEON",
-    "region": "부산 · 서면",
-    "status": "coming-soon",
-    "description": "부산에서 만날 익스테이를 준비하고 있습니다. 오픈 소식과 이용 안내는 추후 공개됩니다."
   }
 ];

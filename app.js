@@ -2,7 +2,6 @@
 (() => {
   const list = document.getElementById("branch-list");
   const collectionList = document.getElementById("collection-list");
-  const upcomingList = document.getElementById("upcoming-list");
   const branches = (window.EXTAY_BRANCHES || []).filter(branch => branch.visible !== false);
   const make = (tag, className, text) => { const e = document.createElement(tag); if (className) e.className = className; if (text) e.textContent = text; return e; };
   function validUrl(value) { try { const u = new URL(value); return u.protocol === "https:" ? u.href : null; } catch { return null; } }
@@ -12,9 +11,15 @@
   }
   for (const b of branches) {
     if (b.status === "coming-soon") {
-      const card = make("article", "coming-soon"); card.id = `stay-${b.id}`;
-      const copy = make("div"); copy.append(make("h3", "", b.name), make("p", "", b.englishName));
-      card.append(copy, make("span", "status", "오픈 예정")); upcomingList.append(card); continue;
+      const card = make("article", "branch branch-upcoming"); card.id = `stay-${b.id}`;
+      const cover = make("div", "upcoming-cover");
+      cover.append(make("span", "upcoming-eyebrow", "EXTAY"), make("span", "upcoming-label", "COMING SOON"));
+      const caption = make("div", "branch-caption");
+      caption.append(make("span", "branch-region", b.region), make("h3", "", b.name));
+      const date = make("p", "opening-date");
+      const month = make("time", "", b.openingLabel); month.dateTime = b.openingMonth;
+      date.append(month, make("span", "opening-note", "오픈 예정"));
+      card.append(cover, caption, date); list.append(card); continue;
     }
     const card = make("article", "branch"); card.id = `stay-${b.id}`;
     const main = link(b.name, validUrl(b.guideUrl) || validUrl(b.bookingUrl) || validUrl(b.projectUrl), "branch-main") || make("div", "branch-main"); main.textContent = "";
@@ -30,5 +35,5 @@
     card.append(main); if (b.description) card.append(make("p", "branch-description", b.description)); card.append(actions); if (!actions.children.length) actions.append(make("span", "empty-message", "안내 준비 중")); (b.group === "collection" ? collectionList : list).append(card);
   }
   if (!list.children.length) list.append(make("p", "empty-message", "지점 안내를 준비하고 있습니다."));
-  document.querySelector(".upcoming").hidden = !upcomingList.children.length;
+
 })();
