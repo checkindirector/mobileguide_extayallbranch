@@ -1,48 +1,155 @@
-// 지점을 추가하려면 아래 배열에 같은 형식으로 정보를 추가하세요.
-// visible: false인 항목은 화면에 나타나지 않습니다. 확인한 실제 정보만 등록하세요.
+// 확인한 실제 공간만 등록합니다. group: collection은 다른 브랜드, coming-soon은 오픈 예정입니다.
 window.EXTAY_BRANCHES = [
   {
-    id: "haebangchon",
-    visible: true,
-    name: "익스테이 맨션 해방촌",
-    englishName: "EXTAY MANSION HAEBANGCHON",
-    region: "서울 · 해방촌",
-    description: "해방촌에서 만나는 익스테이의 공간. 방문 전 오시는 길과 체크인, 숙소 이용 안내를 확인해 보세요.",
-    address: "서울시 용산구 신흥로 59, 2층",
-    image: "assets/haebangchon-lounge.webp",
-    imageAlt: "익스테이 맨션 해방촌의 실내",
-    guideUrl: "https://extay-release.vercel.app/guide-extay",
-    bookingUrl: "",
-    bookingLabel: "예약하기"
+    "id": "haebangchon",
+    "visible": true,
+    "name": "익스테이 맨션 해방촌",
+    "englishName": "EXTAY MANSION HAEBANGCHON",
+    "region": "서울 · 해방촌",
+    "description": "해방촌 골목에서 만나는 포근한 라운지. 머무는 순간에 여유를 더해요.",
+    "address": "서울시 용산구 신흥로 59, 2층",
+    "image": "assets/haebangchon-lounge.webp",
+    "imageAlt": "익스테이 맨션 해방촌의 실내",
+    "guideUrl": "https://extay-release.vercel.app/guide-extay",
+    "bookingUrl": "",
+    "bookingLabel": "예약하기"
   },
   {
-    id: "chungmuro", visible: true, name: "익스테이 맨션 충무로",
-    englishName: "EXTAY MANSION CHUNGMURO", region: "서울 · 충무로", monogram: "CM", image: "assets/chungmuro.webp", imageAlt: "익스테이 맨션 충무로의 라운지와 계단",
-    description: "아고다에서 객실과 예약 가능 일정을 확인하고, 네이버 지도에서 위치를 찾아보세요.",
-    bookingUrl: "https://www.agoda.com/ko-kr/extay-chungmuro/hotel/seoul-kr.html?cid=1439847&currencyCode=KRW",
-    bookingLabel: "아고다 예약", mapUrl: "https://map.naver.com/p/entry/place/2040373750"
+    "id": "chungmuro",
+    "visible": true,
+    "name": "익스테이 맨션 충무로",
+    "englishName": "EXTAY MANSION CHUNGMURO",
+    "region": "서울 · 충무로",
+    "monogram": "CM",
+    "image": "assets/chungmuro.webp",
+    "imageAlt": "익스테이 맨션 충무로의 라운지와 계단",
+    "description": "라운지와 계단이 이어지는 입체적인 공간. 충무로에서 시작하는 서울 여행.",
+    "bookingUrl": "https://www.agoda.com/ko-kr/extay-chungmuro/hotel/seoul-kr.html?cid=1439847&currencyCode=KRW",
+    "bookingLabel": "아고다 예약",
+    "mapUrl": "https://map.naver.com/p/entry/place/2040373750",
+    "sourceUrl": "https://spaceroad.co.kr/project/?idx=4"
   },
   {
-    id: "dongdaemun", visible: true, name: "익스테이 동대문",
-    englishName: "EXTAY DONGDAEMUN", region: "서울 · 동대문", monogram: "DD", image: "assets/dongdaemun.jpg", imageAlt: "익스테이 동대문의 공용 공간",
-    description: "객실과 예약 가능 일정은 아고다에서, 지점 위치는 네이버 지도에서 확인하세요.",
-    bookingUrl: "https://www.agoda.com/ko-kr/a-extay-30-4-2-ddp/hotel/seoul-kr.html?cid=1439847&currencyCode=KRW",
-    bookingLabel: "아고다 예약", mapUrl: "https://naver.me/5K6Tdfxh"
+    "id": "dongdaemun",
+    "visible": true,
+    "name": "익스테이 동대문",
+    "englishName": "EXTAY DONGDAEMUN",
+    "region": "서울 · 동대문",
+    "monogram": "DD",
+    "image": "assets/dongdaemun.jpg",
+    "imageAlt": "익스테이 동대문의 공용 공간",
+    "description": "따뜻한 우드톤의 공용 공간. 서로의 여행과 일상이 만나는 곳.",
+    "bookingUrl": "https://www.agoda.com/ko-kr/a-extay-30-4-2-ddp/hotel/seoul-kr.html?cid=1439847&currencyCode=KRW",
+    "bookingLabel": "아고다 예약",
+    "mapUrl": "https://naver.me/5K6Tdfxh",
+    "sourceUrl": "https://spaceroad.co.kr/project/?idx=1"
   },
   {
-    id: "anotherhouse", visible: true, name: "익스테이 어나더하우스",
-    englishName: "EXTAY ANOTHER HOUSE", region: "서울 · 동대문", monogram: "AH", image: "assets/anotherhouse.webp", imageAlt: "어나더하우스의 입구와 복도",
-    description: "어나더하우스의 공간과 머무는 동안 필요한 정보를 모바일 가이드에서 확인하세요.",
-    guideUrl: "https://anotherhouse-guide.vercel.app/"
+    "id": "anotherhouse",
+    "visible": true,
+    "name": "익스테이 어나더하우스",
+    "englishName": "EXTAY ANOTHER HOUSE",
+    "region": "서울 · 동대문",
+    "monogram": "AH",
+    "image": "assets/anotherhouse.webp",
+    "imageAlt": "어나더하우스의 입구와 복도",
+    "description": "우드톤과 은은한 조명이 반기는 공간. 머무는 동안의 안내를 한눈에.",
+    "guideUrl": "https://anotherhouse-guide.vercel.app/",
+    "sourceUrl": "https://spaceroad.co.kr/project/?idx=76"
   },
   {
-    id: "cheongnyangni", visible: true, name: "익스테이 청량리",
-    englishName: "EXTAY CHEONGNYANGNI", region: "서울 · 청량리", status: "coming-soon",
-    description: "새로운 익스테이를 준비하고 있습니다. 오픈 소식과 이용 안내는 추후 공개됩니다."
+    "id": "jongno",
+    "visible": true,
+    "name": "더 익스테이 라운지 종로",
+    "region": "서울 · 종로",
+    "description": "큰 창으로 들어오는 도시 풍경. 오렌지빛 라운지에서 만나는 생동감.",
+    "image": "assets/jongno.webp",
+    "imageAlt": "큰 창과 오렌지색 좌석이 있는 더 익스테이 라운지 종로",
+    "group": "extay",
+    "projectUrl": "https://spaceroad.co.kr/project/?idx=61"
   },
   {
-    id: "seomyeon", visible: true, name: "익스테이 서면",
-    englishName: "EXTAY SEOMYEON", region: "부산 · 서면", status: "coming-soon",
-    description: "부산에서 만날 익스테이를 준비하고 있습니다. 오픈 소식과 이용 안내는 추후 공개됩니다."
+    "id": "yeonnam",
+    "visible": true,
+    "name": "익스테이 맨션 연남",
+    "region": "서울 · 연남",
+    "description": "창 너머 초록 풍경과 모던한 가구. 빛과 여백이 어우러진 연남의 공간.",
+    "image": "assets/yeonnam.webp",
+    "imageAlt": "나무가 보이는 큰 창과 검은 소파가 있는 익스테이 맨션 연남",
+    "group": "extay",
+    "projectUrl": "https://spaceroad.co.kr/project/?idx=57"
+  },
+  {
+    "id": "mellow",
+    "visible": true,
+    "name": "스테이멜로우 제기",
+    "region": "서울 · 제기",
+    "description": "버터 옐로와 은은한 그린. 둥근 테이블에 둘러앉는 부드러운 시간.",
+    "image": "assets/mellow.webp",
+    "imageAlt": "노란 좌석과 연두색 주방이 있는 스테이멜로우 제기",
+    "group": "collection",
+    "projectUrl": "https://spaceroad.co.kr/project/?idx=75"
+  },
+  {
+    "id": "naru",
+    "visible": true,
+    "name": "스테이나루 제기",
+    "region": "서울 · 제기",
+    "description": "차분한 우드톤과 둥근 테이블. 담백한 색감으로 채운 아늑한 공간.",
+    "image": "assets/naru.webp",
+    "imageAlt": "우드톤 좌석과 둥근 식탁이 있는 스테이나루 제기",
+    "group": "collection",
+    "projectUrl": "https://spaceroad.co.kr/project/?idx=74"
+  },
+  {
+    "id": "nearblue",
+    "visible": true,
+    "name": "니어블루 삼성",
+    "region": "서울 · 삼성",
+    "description": "새하얀 공간에 번지는 푸른빛. 커튼 사이로 스미는 햇살을 만나보세요.",
+    "image": "assets/nearblue.webp",
+    "imageAlt": "흰 커튼과 푸른 바닥이 돋보이는 니어블루 삼성",
+    "group": "collection",
+    "projectUrl": "https://spaceroad.co.kr/project/?idx=73"
+  },
+  {
+    "id": "nemo",
+    "visible": true,
+    "name": "스테이네모 을지로",
+    "region": "서울 · 을지로",
+    "description": "깊은 우드톤에 더한 노란 포인트. 따뜻한 조명 아래 머무는 을지로.",
+    "image": "assets/nemo.webp",
+    "imageAlt": "우드 마감과 노란 주방이 있는 스테이네모 을지로",
+    "group": "collection",
+    "projectUrl": "https://spaceroad.co.kr/project/?idx=72"
+  },
+  {
+    "id": "sai",
+    "visible": true,
+    "name": "스테이사이 종로5가",
+    "region": "서울 · 종로5가",
+    "description": "종로 골목, 활짝 열린 나무 문. 소박한 입구 너머 새로운 머무름.",
+    "image": "assets/sai.webp",
+    "imageAlt": "나무 문과 STAY SAI 간판이 있는 스테이사이 입구",
+    "group": "collection",
+    "projectUrl": "https://spaceroad.co.kr/project/?idx=60"
+  },
+  {
+    "id": "cheongnyangni",
+    "visible": true,
+    "name": "익스테이 청량리",
+    "englishName": "EXTAY CHEONGNYANGNI",
+    "region": "서울 · 청량리",
+    "status": "coming-soon",
+    "description": "새로운 익스테이를 준비하고 있습니다. 오픈 소식과 이용 안내는 추후 공개됩니다."
+  },
+  {
+    "id": "seomyeon",
+    "visible": true,
+    "name": "익스테이 서면",
+    "englishName": "EXTAY SEOMYEON",
+    "region": "부산 · 서면",
+    "status": "coming-soon",
+    "description": "부산에서 만날 익스테이를 준비하고 있습니다. 오픈 소식과 이용 안내는 추후 공개됩니다."
   }
 ];

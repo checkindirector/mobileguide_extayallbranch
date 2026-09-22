@@ -1,6 +1,7 @@
 "use strict";
 (() => {
   const list = document.getElementById("branch-list");
+  const collectionList = document.getElementById("collection-list");
   const upcomingList = document.getElementById("upcoming-list");
   const branches = (window.EXTAY_BRANCHES || []).filter(branch => branch.visible !== false);
   const make = (tag, className, text) => { const e = document.createElement(tag); if (className) e.className = className; if (text) e.textContent = text; return e; };
@@ -16,17 +17,17 @@
       card.append(copy, make("span", "status", "오픈 예정")); upcomingList.append(card); continue;
     }
     const card = make("article", "branch"); card.id = `stay-${b.id}`;
-    const main = link(b.name, validUrl(b.guideUrl) || validUrl(b.bookingUrl), "branch-main") || make("div", "branch-main"); main.textContent = "";
+    const main = link(b.name, validUrl(b.guideUrl) || validUrl(b.bookingUrl) || validUrl(b.projectUrl), "branch-main") || make("div", "branch-main"); main.textContent = "";
     let image;
-    if (b.image) { image = make("img", "branch-image"); image.src = b.image; image.alt = b.imageAlt || b.name; image.width = 400; image.height = 400; image.loading = list.children.length < 2 ? "eager" : "lazy"; image.decoding = "async"; }
+    if (b.image) { image = make("img", "branch-image"); image.src = b.image; image.alt = b.imageAlt || b.name; image.width = 400; image.height = 400; image.loading = b.group !== "collection" && list.children.length < 2 ? "eager" : "lazy"; image.decoding = "async"; }
     else { image = make("span", "branch-image monogram", b.monogram || "EXTAY"); image.setAttribute("aria-hidden", "true"); }
-    const caption = make("div", "branch-caption"); caption.append(make("span", "branch-region", b.region), make("h3", "", b.name), make("span", "branch-english", (b.englishName || "").replace(/^EXTAY\s+(MANSION\s+)?/, ""))); main.append(image, caption);
+    const caption = make("div", "branch-caption"); caption.append(make("span", "branch-region", b.region), make("h3", "", b.name), make("span", "branch-english", (b.englishName || "").replace(/^EXTAY\s+(MANSION\s+)?/, ""))); if (!b.englishName) caption.querySelector(".branch-english").remove(); main.append(image, caption);
     const actions = make("div", "branch-actions");
-    for (const [label, value, primary] of [["이용 안내",b.guideUrl,true],[b.bookingLabel || "예약하기",b.bookingUrl,!validUrl(b.guideUrl)],["지도",b.mapUrl,false]]) {
+    for (const [label, value, primary] of [["이용 안내",b.guideUrl,true],[b.bookingLabel || "예약하기",b.bookingUrl,!validUrl(b.guideUrl)],["지도",b.mapUrl,false],["공간 보기",b.projectUrl,true]]) {
       const a = link(label, value, `action ${primary ? "primary" : "secondary"}`); if (!a) continue;
       a.setAttribute("aria-label", `${b.name} ${label} (새 창)`); const arrow = make("span", "action-arrow", "↗"); arrow.setAttribute("aria-hidden", "true"); a.append(arrow); actions.append(a);
     }
-    card.append(main, actions); if (!actions.children.length) actions.append(make("span", "empty-message", "안내 준비 중")); list.append(card);
+    card.append(main); if (b.description) card.append(make("p", "branch-description", b.description)); card.append(actions); if (!actions.children.length) actions.append(make("span", "empty-message", "안내 준비 중")); (b.group === "collection" ? collectionList : list).append(card);
   }
   if (!list.children.length) list.append(make("p", "empty-message", "지점 안내를 준비하고 있습니다."));
   document.querySelector(".upcoming").hidden = !upcomingList.children.length;

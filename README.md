@@ -1,44 +1,28 @@
 # EXTAY 전체 지점 랜딩페이지
 
-리틀리 참고 페이지처럼 최대 480px의 중앙 세로 화면과 2열 사진 카드를 사용하는 모바일 퍼스트 지점 연결 페이지입니다. 모바일에서는 화면 폭에 맞추고 PC에서도 같은 좁은 구성을 유지합니다. 별도 설치나 빌드가 필요 없습니다.
+리틀리 형태의 최대 480px 중앙 세로 화면, 2열 사진 카드를 사용하는 모바일 퍼스트 정적 페이지입니다. 별도 설치나 빌드가 필요 없습니다.
 
-## 현재 상태
+## 콘텐츠
 
-- 사용자가 제공한 6개 지점을 등록했습니다. 해방촌·충무로·동대문·어나더하우스는 안내 또는 예약 연결, 청량리·서면은 오픈 예정입니다.
-- 아고다 링크는 숙소 경로와 cid, 통화만 유지했습니다. 과거 체크인 날짜, 인원, 검색 세션 및 추적 쿼리는 제거했습니다.
-- 각 링크는 사용자가 직접 제공했습니다. 외부 사이트의 봇 차단 등으로 전체 목적지의 현재 정상 동작 여부는 자동 검증할 수 없었습니다.
-- 운영 중인 4개 지점에는 해당 지점의 실제 사진을 사용합니다. 해방촌은 기존 로컬 자료, 어나더하우스는 공식 가이드, 충무로·동대문은 사용자가 제공한 아고다 지점 페이지의 대표 사진입니다.
-- 사진 없는 신규 지점은 영문 약자로 대체할 수 있습니다. 오픈 예정은 사진이나 예약 버튼 없이 별도 목록에 표시합니다.
-- 공유 썸네일은 사진 없는 단색 배경과 EXTAY 로고·한글 안내 문구를 사용하며, Open Graph와 Twitter 메타데이터에 연결합니다.
-- 주소와 지점 사진도 위 프로젝트의 사용자 제공 자료를 그대로 사용했습니다.
-- 공개 배포 대상: Vercel `checkin-director/mobileguide-extayallbranch`. 원격 저장소의 main을 운영 브랜치로 사용합니다.
+- 익스테이 관련 6개 공간, 다른 브랜드 5개 공간, 오픈 예정 2개 지점을 구분합니다.
+- 사용자 제공 4개 기존 안내·예약 링크를 유지했습니다. 아고다 URL의 과거 날짜·인원·검색 세션은 제거했습니다.
+- 공간로드 프로젝트 10개를 모두 반영했습니다. 기존 3개와 중복되므로 새로 추가한 공간은 7개입니다. 기존 해방촌을 포함해 사진 카드 11개가 표시됩니다.
+- 프로젝트 소개 페이지는 ‘공간 보기’로 연결합니다. 현재 예약 가능 여부를 의미하지 않습니다. 청량리·서면은 사용자 제공 오픈 예정 상태를 유지합니다.
+- 설명은 제공된 안내와 공개 사진에서 확인할 수 있는 공간 특징을 요약했습니다. 요금, 객실 수, 운영 상태 등 미확인 정보는 추가하지 않았습니다.
+- 기존 사진은 사용자 프로젝트 자료·공식 가이드·사용자 제공 아고다 페이지, 추가 7개 사진은 https://spaceroad.co.kr/project 의 해당 프로젝트 대표 이미지입니다.
+- 공유 이미지는 사진 없는 검정 배경의 EXTAY 로고와 한글 안내로 구성합니다. assets/extay-share-v4.png를 OG/Twitter에 연결했습니다.
+- 한글은 Pretendard Variable 1.3.9를 자체 호스팅합니다. 원본과 SIL OFL은 https://github.com/orioncactus/pretendard 에서 가져왔으며 라이선스는 assets/fonts/LICENSE.txt에 보관합니다.
 
-## 지점 추가
+## 관리
 
-`branches.js`의 `window.EXTAY_BRANCHES` 배열에 객체를 추가합니다. 배열 순서대로 표시되며 개수 제한이 없습니다.
+branches.js의 배열 순서대로 표시됩니다. id, name, region, description, image, imageAlt를 입력합니다. guideUrl, bookingUrl, mapUrl은 HTTPS 주소만 연결합니다. projectUrl은 프로젝트 소개 링크입니다. sourceUrl은 콘텐츠 참고 출처입니다.
 
-| 필드 | 내용 |
-| --- | --- |
-| id | 중복 없는 영문 지점 ID |
-| visible | true이면 노출, false이면 숨김 |
-| name / englishName | 한글 / 영문 지점명 |
-| region | 지역·동네 |
-| description | 짧은 소개 |
-| address | 공개 가능한 주소 |
-| image / imageAlt | assets 내 사진 경로 / 사진 설명 |
-| guideUrl | 확인된 HTTPS 이용 안내 링크 |
-| bookingUrl | 확인된 HTTPS 예약 링크. 비어 있으면 버튼 숨김 |
-| bookingLabel | 예약 버튼 문구 |
-| mapUrl | 확인된 HTTPS 지도 링크 |
-| monogram | 사진이 없을 때 쓰는 지점 약자 |
-| status | coming-soon이면 오픈 예정. 예약·안내 버튼 미표시 |
+group: collection은 ‘또 다른 머무름’에 표시됩니다. status: coming-soon은 사진과 링크 없이 ‘곧 만나요’에 표시됩니다. visible: false는 숨김 처리합니다. 실제 확인된 공간만 추가하세요.
 
-실제 지점명을 알기 전에는 빈 카드나 가상의 지역을 추가하지 마세요. 운영 전 지점은 공개 시점에 맞춰 visible을 변경하세요.
+## 배포
 
-## 미리보기·배포
+Vercel checkin-director/mobileguide-extayallbranch의 GitHub main 연동으로 정적 배포합니다.
 
-`index.html`을 브라우저에서 열거나, 이 폴더를 정적 HTTP 서버의 루트로 지정합니다. 의존성, API 키, 서버 기능이 필요하지 않습니다. 배포 시 이 폴더 전체를 문서 루트로 사용합니다.
-
-원격 저장소: https://github.com/checkindirector/mobileguide_extayallbranch
-
-콘텐츠 참조: https://litt.ly/loop.seoul
+- 저장소: https://github.com/checkindirector/mobileguide_extayallbranch
+- 공개 페이지: https://mobileguide-extayallbranch.vercel.app/
+- 레이아웃 참고: https://litt.ly/loop.seoul
