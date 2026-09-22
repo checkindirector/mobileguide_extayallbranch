@@ -10,7 +10,7 @@
 - 프로젝트 소개 페이지는 ‘공간 보기’로 연결합니다. 현재 예약 가능 여부를 의미하지 않습니다. 청량리·서면은 사용자 제공 오픈 예정 상태를 유지합니다.
 - 설명은 제공된 안내와 공개 사진에서 확인할 수 있는 공간 특징을 요약했습니다. 요금, 객실 수, 운영 상태 등 미확인 정보는 추가하지 않았습니다.
 - 기존 사진은 사용자 프로젝트 자료·공식 가이드·사용자 제공 아고다 페이지, 추가 7개 사진은 https://spaceroad.co.kr/project 의 해당 프로젝트 대표 이미지입니다.
-- 공유 이미지는 사진 없는 검정 배경의 EXTAY 로고와 한글 안내로 구성합니다. assets/extay-share-v4.png를 OG/Twitter에 연결했습니다.
+- 공유 이미지는 사진 없는 검정 배경의 EXTAY 로고와 한글 안내로 구성합니다. assets/extay-share-v5.png를 OG/Twitter에 연결했습니다.
 - Apple SD Gothic Neo를 우선 사용하며, 설치되지 않은 기기에는 자체 호스팅한 Pretendard Variable 1.3.9를 표시합니다. 원본과 SIL OFL은 https://github.com/orioncactus/pretendard 에서 가져왔으며 라이선스는 assets/fonts/LICENSE.txt에 보관합니다.
 
 ## 관리
